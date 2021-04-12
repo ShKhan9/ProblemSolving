@@ -10,6 +10,8 @@ import XCTest
 
 class ProblemSolvingTests: XCTestCase {
 
+    let vc = ViewController()
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,9 +20,16 @@ class ProblemSolvingTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testOutput() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let result1 = vc.encode("abc",size:2)
+        
+        let result2 = vc.encode("abc",size:28)
+       
+        XCTAssert(result1 == "cde" && result2 == "cde" ,"Failed to get the required output")
+         
     }
 
     func testPerformanceExample() throws {
